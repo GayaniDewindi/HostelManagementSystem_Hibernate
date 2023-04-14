@@ -1,0 +1,5 @@
+package lk.ijse.hostel.bo;
+
+public enum BOType {
+    USER,ROOM,STUDENT,RESERVATION,ADDUSER,SETTING,LOGIN,PAYMENT_DETAILS,DASHBOARD
+}
