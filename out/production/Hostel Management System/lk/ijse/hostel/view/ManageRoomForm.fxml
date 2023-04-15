@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="rightPane" prefHeight="588.0" prefWidth="893.0" style="-fx-background-color: #c8d6e5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.ManageRoomFormController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1300.0" minWidth="10.0" prefWidth="500.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="406.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane style="-fx-background-color: #c8d6e5;" GridPane.columnIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1300.0" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane style="-fx-background-color: #c8d6e5; -fx-background-radius: 10; -fx-border-radius: 10;" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane layoutX="344.0" layoutY="10.0" GridPane.columnIndex="3">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Type" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblType" prefHeight="47.0" prefWidth="238.0" style="-fx-background-color: white;" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <effect>
+                              <InnerShadow color="#0000009a" height="5.0" radius="2.0" width="5.0" />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Rooms QTY" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtRoomQTY" maxWidth="500.0" prefHeight="36.0" prefWidth="238.0" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                        <Label fx:id="lblQTY" maxWidth="500.0" prefHeight="38.0" prefWidth="238.0" textFill="RED" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="177.0" layoutY="10.0" prefHeight="163.0" prefWidth="199.0" GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXComboBox fx:id="cmbRoomTypeID" onAction="#cmbRoomTypeIDOnAction" prefHeight="36.0" prefWidth="238.0" style="-fx-background-color: white;" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <effect>
+                              <InnerShadow color="#00000098" height="5.0" radius="2.0" width="5.0" />
+                           </effect>
+                        </JFXComboBox>
+                        <Label text="Room Type ID" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="122.0" text="Key Money (LKR)" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtKeyMoney" maxWidth="500.0" prefHeight="0.0" prefWidth="238.0" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <Label fx:id="lblKeyMoney" maxWidth="500.0" prefWidth="500.0" textFill="RED" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" GridPane.columnIndex="5">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#btnAdd" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #00f312; -fx-border-radius: 10; -fx-background-radius: 10;" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnUpdate" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #0476D0; -fx-border-radius: 10; -fx-background-radius: 10;" text="Update" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnDelete" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #ff0005; -fx-border-radius: 10; -fx-background-radius: 10;" text="Delete" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </GridPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="44.0" layoutY="10.0" prefHeight="311.0" prefWidth="793.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1300.0" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10;">
+              <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label contentDisplay="CENTER" maxWidth="500.0" prefHeight="40.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #04abe6, #0095e6, #327ddf, #5e60ce);; -fx-background-radius: 10 0 0 0;" text="   Room Type ID" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#000000f6" height="15.0" radius="3.25" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="39.0" maxWidth="500.0" prefHeight="40.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #04abe6, #0095e6, #327ddf, #5e60ce);;" text="Type" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#000000f6" height="15.0" radius="3.25" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="135.0" layoutY="39.0" maxWidth="500.0" prefHeight="40.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #04abe6, #0095e6, #327ddf, #5e60ce);;" text="Key Money (LKR)" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#000000f6" height="15.0" radius="3.25" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="260.0" layoutY="39.0" maxWidth="500.0" prefHeight="40.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #04abe6, #0095e6, #327ddf, #5e60ce);; -fx-background-radius: 0 10 0 0;" text="Room QTY" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.valignment="TOP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#000000f6" height="15.0" radius="3.25" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblKeyMoneyRM_1324" contentDisplay="CENTER" layoutX="135.0" layoutY="70.0" maxWidth="500.0" onMouseClicked="#RM_1324OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="135.0" layoutY="70.0" maxWidth="500.0" onMouseClicked="#RM_5467OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" text="   Non-AC / Food " textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblKeyMoneyRM_5467" contentDisplay="CENTER" layoutX="260.0" layoutY="70.0" maxWidth="500.0" onMouseClicked="#RM_5467OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="135.0" layoutY="66.0" maxWidth="500.0" onMouseClicked="#RM_7896OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" text="   AC " textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblKeyMoneyRM_7896" contentDisplay="CENTER" layoutX="135.0" layoutY="166.0" maxWidth="500.0" onMouseClicked="#RM_7896OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="135.0" layoutY="231.0" maxWidth="500.0" onMouseClicked="#RM_0093OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" text="   AC / Food" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblKeyMoneyRM_0093" contentDisplay="CENTER" layoutX="135.0" layoutY="231.0" maxWidth="500.0" onMouseClicked="#RM_0093OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="0.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="120.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_1324OnAction" prefHeight="100.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 10 0 0 10;" text="   RM-1324" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_1324OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);;" text="   Non-AC" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow radius="4.75" width="0.0" />
+                     </effect>
+                  </Label>
+                  <GridPane layoutX="10.0" layoutY="58.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="0.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="120.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_5467OnAction" prefHeight="100.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 10 0 0 10;" text="   RM-5467" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="146.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="0.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="120.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_7896OnAction" prefHeight="100.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 10 0 0 10;" text="   RM-7896" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="234.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="0.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="120.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_0093OnAction" prefHeight="100.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 10 0 0 10;" text="   RM-0093" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="56.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="lblQTYRM_1324" contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_1324OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 0 10 10 0;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="385.0" layoutY="56.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="lblQTYRM_54667" contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_5467OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 0 10 10 0;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="lblQTYRM_7896" contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_7896OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 0 10 10 0;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="0.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="5.0" prefWidth="5.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="lblQTYRM_0093" contentDisplay="CENTER" maxWidth="500.0" onMouseClicked="#RM_0093OnAction" prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to bottom, #48bfe3, #46cce5, #4dd8e4, #5de4e2, #72efdd);; -fx-background-radius: 0 10 10 0;" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow radius="4.75" width="0.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

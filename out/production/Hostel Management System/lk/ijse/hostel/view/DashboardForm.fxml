@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="672.0" prefWidth="1249.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.DashboardFormController">
+   <children>
+      <AnchorPane prefHeight="93.0" prefWidth="1229.0" style="-fx-background-color: #6D214F;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="767.0" layoutY="23.0" prefHeight="49.0" prefWidth="86.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="853.0" layoutY="23.0" prefHeight="49.0" prefWidth="136.0" text="2023-04-05" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1017.0" layoutY="23.0" prefHeight="49.0" prefWidth="107.0" text="Time :" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="1124.0" layoutY="23.0" prefHeight="49.0" prefWidth="125.0" text="02:53:45" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="161.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24 Hostel Management System" wrappingWidth="559.6708984375">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="92.0" fitWidth="97.0" layoutX="24.0" layoutY="1.0" onMouseClicked="#imgDashBoardOnAction">
+               <image>
+                  <Image url="@assests/icons8-menu-50.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <VBox fx:id="NameSideAnchorPane" layoutY="92.0" prefHeight="588.0" prefWidth="355.0" style="-fx-background-color: #6D214F;">
+         <children>
+            <JFXButton onAction="#btnRegistration" prefHeight="97.0" prefWidth="363.0" text="Registration" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnStudents" prefHeight="97.0" prefWidth="363.0" text="Students" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnRooms" prefHeight="97.0" prefWidth="378.0" text="Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnPaymentDetails" prefHeight="97.0" prefWidth="360.0" text="Payment Details" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnSettings" prefHeight="97.0" prefWidth="360.0" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnLogOutOnAction" prefHeight="112.0" prefWidth="355.0" text="LogOut" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="home" layoutX="355.0" layoutY="92.0" onMouseExited="#NameSideOnAction" prefHeight="588.0" prefWidth="893.0" />
+   </children>
+</AnchorPane>

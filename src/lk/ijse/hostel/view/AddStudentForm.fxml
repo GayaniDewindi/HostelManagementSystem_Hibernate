@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="popUpPane" prefHeight="588.0" prefWidth="893.0" style="-fx-background-radius: 10; -fx-background-color: #dfe4ea; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.AddStudentFormController">
+   <children>
+      <TextField fx:id="txtID" layoutX="68.0" layoutY="119.0" prefHeight="54.0" prefWidth="250.0" />
+      <Label layoutX="64.0" layoutY="98.0" text="Student ID">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="550.0" layoutY="119.0" prefHeight="54.0" prefWidth="250.0" />
+      <TextField fx:id="txtContact" layoutX="550.0" layoutY="240.0" prefHeight="54.0" prefWidth="250.0" />
+      <TextArea fx:id="txtAddress" layoutX="64.0" layoutY="233.0" maxHeight="54.0" prefHeight="54.0" prefWidth="250.0" />
+      <JFXDatePicker fx:id="txtDOB" layoutX="68.0" layoutY="365.0" prefHeight="54.0" prefWidth="250.0" style="-fx-border-color: white; -fx-background-color: white;">
+         <effect>
+            <InnerShadow color="#00000099" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+      </JFXDatePicker>
+      <JFXButton buttonType="RAISED" layoutX="324.0" layoutY="475.0" onAction="#btnAdd" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #4cd137; -fx-border-radius: 10; -fx-background-radius: 10;" text="Add">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbGender" layoutX="553.0" layoutY="365.0" prefHeight="54.0" prefWidth="250.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow color="#00000098" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+      </JFXComboBox>
+      <Label layoutX="61.0" layoutY="211.0" text="Address">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="342.0" text="Date Of Birth">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="98.0" text="Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="344.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="218.0" text="Contact  No">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="66.0" layoutY="138.0" prefHeight="5.0" prefWidth="250.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContact" layoutX="66.0" layoutY="299.0" prefHeight="5.0" prefWidth="250.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="64.0" layoutY="336.0" prefHeight="5.0" prefWidth="250.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Text fill="#070707" layoutX="266.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Student Form" wrappingWidth="309.6708984375">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="34.0" />
+         </font>
+      </Text>
+      <Line endX="43.0" endY="260.0" layoutX="405.0" layoutY="128.0" startX="43.0" startY="8.0" />
+   </children>
+</AnchorPane>
