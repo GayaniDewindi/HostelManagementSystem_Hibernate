@@ -73,7 +73,7 @@
             <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TableView fx:id="table" editable="true" maxHeight="1500.0" prefHeight="1000.0" prefWidth="500.0" style="-fx-background-color: #c8d6e5; -fx-border-radius: 10; -fx-background-radius: 10;" tableMenuButtonVisible="true" GridPane.valignment="BOTTOM">
+            <TableView fx:id="table" editable="true" maxHeight="1500.0" prefHeight="1000.0" prefWidth="500.0" style="-fx-background-color: #dcdde1; -fx-border-radius: 10; -fx-background-radius: 10;" tableMenuButtonVisible="true" GridPane.valignment="BOTTOM">
                <columns>
                   <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />

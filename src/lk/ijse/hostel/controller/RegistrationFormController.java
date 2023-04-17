@@ -36,7 +36,7 @@ public class RegistrationFormController implements Initializable {
     @FXML
     private JFXComboBox<String> cmbStatus;
     @FXML
-    private GridPane rightPane;
+    public GridPane rightPane;
 
     @FXML
     private JFXDatePicker txtDate;
