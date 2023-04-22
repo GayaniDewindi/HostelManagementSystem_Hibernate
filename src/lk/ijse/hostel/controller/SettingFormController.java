@@ -41,35 +41,35 @@ public class SettingFormController {
         lblPassword.setText(null);
         lblRePassword.setText(null);
 
-        if (CheckValidation.validation(ValidationType.USERNAME, userName)) {
-            if (CheckValidation.validation(ValidationType.PASSWORD, password)) {
-                if (password.equals(rePassword)) {
-                    boolean isUpdated = settingBO.updateUserNameAndPassword(new UserDTO(userName, password));
-                    Alert alert;
-                    if (isUpdated) {
-                        alert = new Alert(Alert.AlertType.INFORMATION, "Password and UserName has been successfully Update");
-                        txtPassword.setText(null);
-                        txtRePassword.setText(null);
-                    } else {
-                        alert = new Alert(Alert.AlertType.ERROR, "Error");
-                    }
-                    alert.show();
-                } else {
-                    lblRePassword.setText("Is not matched");
-                    txtPassword.requestFocus();
-                    txtRePassword.setText(null);
-                }
+        /*if (CheckValidation.validation(ValidationType.USERNAME, userName)) {
+            if (CheckValidation.validation(ValidationType.PASSWORD, password)) {*/
+        if (password.equals(rePassword)) {
+            boolean isUpdated = settingBO.updateUserNameAndPassword(new UserDTO(userName, password));
+            Alert alert;
+            if (isUpdated) {
+                alert = new Alert(Alert.AlertType.INFORMATION, "Password and UserName has been successfully Update");
+                txtPassword.setText(null);
+                txtRePassword.setText(null);
             } else {
+                alert = new Alert(Alert.AlertType.ERROR, "Error");
+            }
+            alert.show();
+        } else {
+            lblRePassword.setText("Is not matched");
+            txtPassword.requestFocus();
+            txtRePassword.setText(null);
+        }
+    } /*else {
                 //password
                 lblPassword.setText("Incorrect password");
                 txtPassword.requestFocus();
                 txtPassword.setText(null);
-            }
-        } else {
+            }*/
+}/* else {
             //user name
             lblUserName.setText("Incorrect UserName");
             txtUserName.requestFocus();
             txtUserName.setText(null);
-        }
-    }
-}
+        }*/
+//    }
+//}

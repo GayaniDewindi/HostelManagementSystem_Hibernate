@@ -24,5 +24,7 @@
          </font>
       </JFXButton>
       <FontAwesomeIconView fx:id="icnEye" fill="#26059d" glyphName="EYE_SLASH" layoutX="416.0" layoutY="296.0" onMouseClicked="#eyeClickOnAction" size="23" wrappingWidth="15.0" />
+      <Label fx:id="lblUserName" layoutX="79.0" layoutY="132.0" prefHeight="17.0" prefWidth="242.0" />
+      <Label fx:id="lblPassword" layoutX="78.0" layoutY="244.0" prefHeight="17.0" prefWidth="253.0" />
    </children>
 </AnchorPane>

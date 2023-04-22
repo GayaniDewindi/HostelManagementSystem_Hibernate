@@ -8,17 +8,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.hostel.bo.BOFactory;
+import lk.ijse.hostel.bo.BOType;
+import lk.ijse.hostel.bo.custom.LogInBO;
+import lk.ijse.hostel.dto.UserDTO;
 import lk.ijse.hostel.util.ValidationUtil;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
+
+import static javafx.scene.paint.Color.RED;
 
 public class LoginFormController {
     public AnchorPane apnMain;
@@ -27,6 +34,10 @@ public class LoginFormController {
     public JFXTextField txtPassword;
     public JFXButton btnLog;
     public FontAwesomeIconView icnEye;
+
+    private final LogInBO logInBO= (LogInBO) BOFactory.getInstance().getBOType(BOType.LOGIN);
+    public Label lblUserName;
+    public Label lblPassword;
 
     LinkedHashMap<JFXTextField, Pattern> map = new LinkedHashMap<>();
     Pattern usernamePattern = Pattern.compile("^[A-z0-9]{3,10}$");
@@ -79,6 +90,7 @@ public class LoginFormController {
     }
 
     public void passwordFieldValidationOnAction(KeyEvent keyEvent) {
+/*
         Object response = ValidationUtil.validateJFXPasswordField(map1, btnLog);
         if (keyEvent.getCode() == KeyCode.ENTER) {
             if (response instanceof JFXPasswordField) {
@@ -88,18 +100,52 @@ public class LoginFormController {
 
             }
         }
+*/
 
     }
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = getClass().getResource("/lk/ijse/hostel/view/DashboardForm.fxml");
+    /*    URL resource = getClass().getResource("/lk/ijse/hostel/view/DashboardForm.fxml");
         Parent load = FXMLLoader.load(resource);
         Scene scene = new Scene(load);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
+        String password = txtPassword.getText();
+        String userName = txtUsername.getText();
+        String pswdFildPassword = pwdPassword.getText();
+        clearAll();
+        try{
+            UserDTO user = logInBO.getUser(userName);
+            if (password.equals(user.getPassword()) || pswdFildPassword.equals(user.getPassword())) {
+                if (userName.equals(user.getUserName())) {
+                    Stage stage = (Stage) apnMain.getScene().getWindow();
+                    stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/hostel/view/DashboardForm.fxml"))));
+                    stage.centerOnScreen();
+                }else {
+                    txtUsername.requestFocus();
+                    txtUsername.setFocusColor(RED);
+                    txtUsername.setText("Username does not match");
+                }
+            }else {
+                txtPassword.requestFocus();
+                txtPassword.setFocusColor(RED);
+                pwdPassword.requestFocus();
+                pwdPassword.setFocusColor(RED);
+                lblPassword.setText("Password does not match");
+            }
+        }catch (Exception e){
+            txtUsername.requestFocus();
+            txtUsername.setFocusColor(RED);
+            lblUserName.setText("Username does not match");
+        }
+
     }
 
+    private void clearAll(){
+        lblPassword.setText("");
+        lblUserName.setText("");
+    }
     public void eyeClickOnAction(MouseEvent mouseEvent) {
         if(icnEye.getGlyphName().equals("EYE_SLASH")){ // must show password
             icnEye.setGlyphName("EYE");
